@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Community Asset Brokers</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: #17324f;
+      background: #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    header {
+      background: #10273d;
+      padding: 28px 4%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      color: #ff7900;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 44px;
+      font-family: Arial, sans-serif;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-size: 15px;
+    }
+
+    nav a.active {
+      color: #ff7900;
+    }
+
+    .contact-button {
+      border: 2px solid white;
+      border-radius: 40px;
+      padding: 16px 26px;
+    }
+
+    .contact-button.active {
+      border-color: #ff7900;
+    }
+
+    .page-hero {
+      background: #234766;
+      color: white;
+      text-align: center;
+      padding: 110px 30px;
+    }
+
+    .page-hero h1 {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 72px;
+      letter-spacing: 6px;
+    }
+
+    main {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 80px 5% 110px;
+    }
+
+    h2 {
+      font-size: 54px;
+      font-weight: normal;
+      margin: 0 0 35px;
+    }
+
+    .intro {
+      font-size: 27px;
+      line-height: 1.7;
+      max-width: 1250px;
+      margin-bottom: 60px;
+    }
+
+    .contact-panel {
+      background: #f7f5f0;
+      border-left: 8px solid #ff7900;
+      padding: 55px 65px;
+      max-width: 1100px;
+    }
+
+    .contact-panel h3 {
+      margin: 0 0 25px;
+      font-size: 38px;
+      font-weight: normal;
+    }
+
+    .contact-panel p {
+      margin: 0 0 20px;
+      font-size: 24px;
+      line-height: 1.6;
+    }
+
+    .email-button {
+      display: inline-block;
+      margin-top: 20px;
+      background: #ff7900;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 20px 32px;
+      border-radius: 40px;
+    }
+
+    @media (max-width: 1000px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .page-hero h1 {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">COMMUNITY ASSET BROKERS</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="resources.html">Resources</a>
+    <a class="contact-button active" href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <h1>CONTACT US</h1>
+</section>
+
+<main>
+
+  <h2>Let's Discuss Your Project</h2>
+
+  <div class="intro">
+    <p>
+      Every development project has its own community, governmental, and political environment.
+      Community Asset Brokers can help you understand that environment and determine where
+      community development support can be most useful.
+    </p>
+
+    <p>
+      Contact us to discuss your project, the challenges you are encountering, and where you
+      are in the development process.
+    </p>
+  </div>
+
+  <div class="contact-panel">
+    <h3>Community Asset Brokers</h3>
+
+    <p>
+      Twin Cities Metro
+    </p>
+
+    <p>
+      Send us an email to begin a conversation about your project.
+    </p>
+
+    <a class="email-button" href="mailto:info@communityassetbrokers.com">
+      Email Community Asset Brokers
+    </a>
+  </div>
+
+</main>
+
+</body>
+</html>
