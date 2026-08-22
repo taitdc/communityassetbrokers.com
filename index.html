@@ -1,10 +1,431 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Community Asset Brokers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Asset Brokers</title>
+
+<style>
+:root {
+  --orange: #f47a00;
+  --navy: #172c45;
+  --text: #343434;
+  --light: #f6f5f2;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: white;
+}
+
+header {
+  background: var(--navy);
+  color: white;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.brand {
+  color: var(--orange);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: var(--orange);
+}
+
+.hero {
+  min-height: 520px;
+  background:
+    linear-gradient(rgba(16,37,60,.62), rgba(16,37,60,.62)),
+    linear-gradient(135deg, #24496c, #718da4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero-inner {
+  max-width: 900px;
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.05;
+}
+
+.hero p {
+  font-family: Georgia, serif;
+  font-size: clamp(22px, 3vw, 34px);
+  margin: 0 auto 35px;
+  max-width: 800px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  text-decoration: none;
+  padding: 15px 28px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+section {
+  padding: 80px 8%;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  color: var(--navy);
+  font-size: 38px;
+  margin: 0 0 25px;
+}
+
+h3 {
+  color: var(--navy);
+  margin-top: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.lead {
+  font-family: Georgia, serif;
+  font-size: 21px;
+}
+
+.alt {
+  background: var(--light);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-top: 4px solid var(--orange);
+  box-shadow: 0 3px 15px rgba(0,0,0,.07);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.highlight {
+  font-weight: bold;
+  font-size: 21px;
+  color: var(--navy);
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.photo-placeholder {
+  min-height: 300px;
+  background: #d8d8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+}
+
+.resources ul {
+  columns: 2;
+  padding-left: 20px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  font-size: 20px;
+}
+
+footer {
+  background: #1d1d1d;
+  color: #bbb;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+footer strong {
+  color: white;
+}
+
+@media (max-width: 800px) {
+  header {
+    display: block;
+  }
+
+  nav {
+    margin-top: 15px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 18px 8px 0;
+  }
+
+  .services,
+  .team {
+    grid-template-columns: 1fr;
+  }
+
+  .resources ul {
+    columns: 1;
+  }
+}
+</style>
 </head>
+
 <body>
-  <h1>Community Asset Brokers</h1>
-  <p>Website migration in progress.</p>
+
+<header>
+  <div class="brand">COMMUNITY ASSET BROKERS</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <h1>Community Asset Brokers</h1>
+    <p>Convince the Community to Support Your Project — So the Lawyers Don't Have to Defend It.</p>
+    <a class="button" href="#about">Learn More</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-inner">
+    <h2>About Us</h2>
+
+    <p class="lead">
+      The Twin Cities Metro is a labyrinth of rules and regulations intended
+      to balance the economic motivations of developers with the comprehensive
+      plans of the neighborhoods in which they invest.
+    </p>
+
+    <p>
+      The system is never as clear and inviting as advertised. Community Asset
+      Brokers was created out of a need for both for-profit and nonprofit
+      commercial and residential developers to efficiently navigate community,
+      city, and county procedures.
+    </p>
+
+    <h3>What We Do</h3>
+
+    <p>
+      The procedures of local government and their departments can be confusing
+      and burdensome. Adding the layer of community notification can send
+      businesses into unfamiliar territory without direct assistance.
+    </p>
+
+    <p class="highlight">
+      We bridge the gap between community planning expectations and business realities.
+    </p>
+
+    <p>
+      We assist clients with zoning changes, major and minor variances,
+      conditional use permits, historic preservation, site plan review,
+      licenses, and other projects requiring community notification and input.
+    </p>
+  </div>
+</section>
+
+<section class="alt" id="services">
+  <div class="section-inner">
+    <h2>Services</h2>
+
+    <p class="lead">
+      We engage early in the development process so community input can be
+      integrated without compromising project goals, timelines, and viability.
+    </p>
+
+    <div class="services">
+
+      <div class="card">
+        <h3>Ideas &amp; Financing</h3>
+        <p>
+          We troubleshoot potential conflicts with neighborhood plans and
+          politics during the early stages of a project, assist with community
+          engagement, and research financing opportunities that may intersect
+          with the project location.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>City &amp; County Applications</h3>
+        <p>
+          We help clients navigate community-notification requirements and
+          engage residents through outreach, petitions, organizational
+          committees, and community meetings.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Approval</h3>
+        <p>
+          We organize community supporters and help translate community
+          enthusiasm into effective participation during public hearings and
+          governmental approval processes.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Appeal</h3>
+        <p>
+          When an application is denied, we help broaden community support,
+          develop public-relations strategies, and prepare for appeals to
+          higher authorities.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="section-inner">
+    <h2>Our Team</h2>
+
+    <div class="team">
+
+      <div class="photo-placeholder">
+        Photo of Tait A. Danielson
+      </div>
+
+      <div>
+        <h3>Tait A. Danielson</h3>
+
+        <p>
+          As the former Executive Director of both a St. Paul District Council
+          and a Minneapolis Neighborhood Council, Tait has spent over 15 years
+          advocating for the interests of residents and business owners.
+        </p>
+
+        <p>
+          His education and experience are grounded in political lobbying,
+          grant and loan appropriation, city planning, and process negotiation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="service-area">
+  <div class="section-inner">
+    <h2>Service Area</h2>
+
+    <p class="lead">
+      We serve the entire seven-county Twin Cities metropolitan area.
+    </p>
+
+    <p>
+      Community Asset Brokers works with projects throughout Minneapolis,
+      St. Paul, and surrounding communities.
+    </p>
+  </div>
+</section>
+
+<section id="resources" class="resources">
+  <div class="section-inner">
+    <h2>Resources</h2>
+
+    <p class="lead">
+      Applications that commonly require community notification include:
+    </p>
+
+    <ul>
+      <li>Rezoning</li>
+      <li>Major and Minor Variances</li>
+      <li>Site Plan Review</li>
+      <li>Conditional Use Permits</li>
+      <li>Non-Conforming Use Applications</li>
+      <li>Lot Splits</li>
+      <li>Sign Variances</li>
+      <li>Liquor Licensing</li>
+      <li>Vehicle Repair and Salvage Licensing</li>
+      <li>Sound Level Variances</li>
+      <li>Other municipal permits and licenses</li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt contact" id="contact">
+  <div class="section-inner">
+    <h2>Contact Us</h2>
+
+    <p>
+      Ready to discuss your project? Contact Community Asset Brokers to
+      evaluate your needs and determine the appropriate next steps.
+    </p>
+
+    <a class="button" href="mailto:">Email Us</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>Community Asset Brokers</strong><br>
+  Twin Cities Metropolitan Area
+</footer>
+
 </body>
 </html>
