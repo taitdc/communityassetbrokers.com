@@ -7,10 +7,12 @@
 
 <style>
 :root {
-  --orange: #f47a00;
-  --navy: #172c45;
-  --text: #343434;
-  --light: #f6f5f2;
+  --navy: #17324f;
+  --navy-dark: #0d2137;
+  --blue: #294d6d;
+  --orange: #ff7900;
+  --cream: #f7f5f0;
+  --text: #3d4650;
   --white: #ffffff;
 }
 
@@ -24,203 +26,331 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
-  line-height: 1.6;
-  background: white;
+  background: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
 }
 
+/* HEADER */
+
 header {
-  background: var(--navy);
-  color: white;
-  padding: 20px 6%;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 26px 5%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  justify-content: space-between;
 }
 
 .brand {
   color: var(--orange);
-  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(22px, 2.3vw, 34px);
   font-weight: 700;
   letter-spacing: 2px;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
 nav a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
-  margin-left: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
 }
 
 nav a:hover {
   color: var(--orange);
 }
 
+.contact-button {
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 11px 22px;
+}
+
+/* HERO */
+
 .hero {
-  min-height: 520px;
+  min-height: 650px;
   background:
-    linear-gradient(rgba(16,37,60,.62), rgba(16,37,60,.62)),
-    linear-gradient(135deg, #24496c, #718da4);
+    linear-gradient(rgba(10, 33, 56, .72), rgba(10, 33, 56, .83)),
+    linear-gradient(135deg, #17324f 0%, #365b79 50%, #17324f 100%);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 70px 20px;
+  padding: 150px 30px 90px;
 }
 
-.hero-inner {
-  max-width: 900px;
+.hero-content {
+  max-width: 1000px;
+}
+
+.hero-kicker {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .hero h1 {
-  margin: 0 0 20px;
-  font-size: clamp(42px, 6vw, 76px);
-  line-height: 1.05;
+  margin: 0 auto 26px;
+  max-width: 950px;
+  font-size: clamp(42px, 5.8vw, 76px);
+  line-height: 1.08;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .hero p {
-  font-family: Georgia, serif;
-  font-size: clamp(22px, 3vw, 34px);
-  margin: 0 auto 35px;
-  max-width: 800px;
+  max-width: 780px;
+  margin: 0 auto 38px;
+  font-size: clamp(20px, 2.2vw, 29px);
 }
 
-.button {
+.primary-button {
   display: inline-block;
   background: var(--orange);
   color: white;
   text-decoration: none;
-  padding: 15px 28px;
-  border-radius: 4px;
-  text-transform: uppercase;
+  padding: 16px 34px;
+  border-radius: 32px;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
 }
 
-section {
-  padding: 80px 8%;
+/* INTRO */
+
+.intro {
+  padding: 85px 7% 70px;
 }
 
-.section-inner {
-  max-width: 1100px;
+.intro-inner {
+  max-width: 1180px;
+  margin: auto;
+  text-align: center;
+}
+
+.intro h2 {
+  color: var(--navy);
+  font-size: clamp(30px, 3.2vw, 46px);
+  font-weight: 400;
+  margin: 0 0 28px;
+}
+
+.intro p {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.9;
+}
+
+/* TWO FEATURE CARDS */
+
+.features {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 6% 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 38px;
+}
+
+.feature-card {
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.city-art {
+  height: 280px;
+  position: relative;
+  background: linear-gradient(
+    160deg,
+    #91b5cf 0%,
+    #d9e8f0 52%,
+    #66839a 53%,
+    #29445b 100%
+  );
+}
+
+.city-art::before {
+  content: "";
+  position: absolute;
+  left: 7%;
+  bottom: 0;
+  width: 86%;
+  height: 62%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0 4%,
+      #1f3344 4% 13%,
+      transparent 13% 16%,
+      #355267 16% 25%,
+      transparent 25% 29%,
+      #172b3d 29% 43%,
+      transparent 43% 47%,
+      #49667b 47% 56%,
+      transparent 56% 61%,
+      #233a4e 61% 74%,
+      transparent 74% 78%,
+      #183044 78% 92%,
+      transparent 92%
+    );
+}
+
+.city-art::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 24%;
+  background: rgba(17, 46, 67, .55);
+}
+
+.feature-copy {
+  padding: 36px 38px 42px;
+  text-align: center;
+}
+
+.feature-copy h3 {
+  margin: 0 0 20px;
+  color: var(--orange);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.feature-copy p {
+  margin: 0 auto 22px;
+  font-size: 18px;
+  max-width: 460px;
+}
+
+.feature-copy strong {
+  color: var(--navy);
+}
+
+.text-link {
+  color: var(--orange);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* VALUE SECTION */
+
+.value {
+  background: var(--navy);
+  color: white;
+  padding: 85px 7%;
+  text-align: center;
+}
+
+.value-inner {
+  max-width: 960px;
   margin: auto;
 }
 
-h2 {
-  color: var(--navy);
-  font-size: 38px;
+.value h2 {
   margin: 0 0 25px;
+  color: white;
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: 400;
 }
 
-h3 {
-  color: var(--navy);
-  margin-top: 35px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.lead {
-  font-family: Georgia, serif;
-  font-size: 21px;
-}
-
-.alt {
-  background: var(--light);
-}
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  margin-top: 35px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-top: 4px solid var(--orange);
-  box-shadow: 0 3px 15px rgba(0,0,0,.07);
-}
-
-.card h3 {
-  margin-top: 0;
-}
-
-.highlight {
-  font-weight: bold;
-  font-size: 21px;
-  color: var(--navy);
-}
-
-.team {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 45px;
-  align-items: center;
-}
-
-.photo-placeholder {
-  min-height: 300px;
-  background: #d8d8d8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  text-align: center;
-  padding: 20px;
-}
-
-.resources ul {
-  columns: 2;
-  padding-left: 20px;
-}
-
-.contact {
-  text-align: center;
-}
-
-.contact p {
+.value p {
   font-size: 20px;
+  margin-bottom: 34px;
 }
+
+/* FOOTER */
 
 footer {
-  background: #1d1d1d;
-  color: #bbb;
-  text-align: center;
-  padding: 45px 20px;
+  background: #191919;
+  color: #9f9f9f;
+  padding: 48px 7%;
 }
 
-footer strong {
-  color: white;
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
 }
 
-@media (max-width: 800px) {
+footer a {
+  color: #c7c7c7;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--orange);
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
   header {
+    position: relative;
+    background: var(--navy-dark);
     display: block;
+    padding: 22px 6%;
   }
 
   nav {
-    margin-top: 15px;
+    margin-top: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
   nav a {
-    display: inline-block;
-    margin: 8px 18px 8px 0;
+    font-size: 12px;
   }
 
-  .services,
-  .team {
+  .contact-button {
+    padding: 6px 12px;
+  }
+
+  .hero {
+    padding-top: 80px;
+    min-height: 550px;
+  }
+
+  .features {
     grid-template-columns: 1fr;
   }
 
-  .resources ul {
-    columns: 1;
+  .footer-inner {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-inner div {
+    margin: 10px 0;
   }
 }
 </style>
@@ -229,202 +359,186 @@ footer strong {
 <body>
 
 <header>
-  <div class="brand">COMMUNITY ASSET BROKERS</div>
+
+  <div class="brand">
+    COMMUNITY ASSET BROKERS
+  </div>
 
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">Contact Us</a>
+    <a href="#what-we-do">Resources</a>
+    <a class="contact-button" href="#contact">Contact Us</a>
   </nav>
+
 </header>
 
 <main>
 
 <section class="hero" id="home">
-  <div class="hero-inner">
-    <h1>Community Asset Brokers</h1>
-    <p>Convince the Community to Support Your Project — So the Lawyers Don't Have to Defend It.</p>
-    <a class="button" href="#about">Learn More</a>
+
+  <div class="hero-content">
+
+    <div class="hero-kicker">
+      Twin Cities Community Development Strategy
+    </div>
+
+    <h1>
+      Convince the Community to Support Your Project
+    </h1>
+
+    <p>
+      So the Lawyers Don't Have to Defend It.
+    </p>
+
+    <a class="primary-button" href="#about">
+      Learn More
+    </a>
+
   </div>
+
 </section>
 
-<section id="about">
-  <div class="section-inner">
-    <h2>About Us</h2>
 
-    <p class="lead">
-      The Twin Cities Metro is a labyrinth of rules and regulations intended
-      to balance the economic motivations of developers with the comprehensive
-      plans of the neighborhoods in which they invest.
-    </p>
+<section class="intro" id="about">
 
-    <p>
-      The system is never as clear and inviting as advertised. Community Asset
-      Brokers was created out of a need for both for-profit and nonprofit
-      commercial and residential developers to efficiently navigate community,
-      city, and county procedures.
-    </p>
+  <div class="intro-inner">
 
-    <h3>What We Do</h3>
+    <h2>
+      Navigating Development Starts With Understanding the Community
+    </h2>
 
     <p>
-      The procedures of local government and their departments can be confusing
-      and burdensome. Adding the layer of community notification can send
-      businesses into unfamiliar territory without direct assistance.
+      The Twin Cities Metro is a labyrinth of rules and regulations
+      that are meant to synergize the economic motivations of developers
+      with the comprehensive plans of the neighborhoods in which they invest.
+      The "system" is never as clear and inviting as advertised.
+      Community Asset Brokers was created out of a need for both
+      for-profit and nonprofit commercial and residential developers
+      to successfully navigate community, city, and county procedures.
     </p>
 
-    <p class="highlight">
-      We bridge the gap between community planning expectations and business realities.
-    </p>
-
-    <p>
-      We assist clients with zoning changes, major and minor variances,
-      conditional use permits, historic preservation, site plan review,
-      licenses, and other projects requiring community notification and input.
-    </p>
   </div>
+
 </section>
 
-<section class="alt" id="services">
-  <div class="section-inner">
-    <h2>Services</h2>
 
-    <p class="lead">
-      We engage early in the development process so community input can be
-      integrated without compromising project goals, timelines, and viability.
-    </p>
+<section class="features" id="what-we-do">
 
-    <div class="services">
+  <article class="feature-card">
 
-      <div class="card">
-        <h3>Ideas &amp; Financing</h3>
-        <p>
-          We troubleshoot potential conflicts with neighborhood plans and
-          politics during the early stages of a project, assist with community
-          engagement, and research financing opportunities that may intersect
-          with the project location.
-        </p>
-      </div>
+    <div class="city-art"></div>
 
-      <div class="card">
-        <h3>City &amp; County Applications</h3>
-        <p>
-          We help clients navigate community-notification requirements and
-          engage residents through outreach, petitions, organizational
-          committees, and community meetings.
-        </p>
-      </div>
+    <div class="feature-copy">
 
-      <div class="card">
-        <h3>Approval</h3>
-        <p>
-          We organize community supporters and help translate community
-          enthusiasm into effective participation during public hearings and
-          governmental approval processes.
-        </p>
-      </div>
+      <h3>WHAT WE DO</h3>
 
-      <div class="card">
-        <h3>Appeal</h3>
-        <p>
-          When an application is denied, we help broaden community support,
-          develop public-relations strategies, and prepare for appeals to
-          higher authorities.
-        </p>
-      </div>
+      <p>
+        <strong>
+          We bridge the gap between community planning expectations
+          and business realities.
+        </strong>
+      </p>
+
+      <a class="text-link" href="#services">
+        Learn More &nbsp;→
+      </a>
 
     </div>
-  </div>
-</section>
 
-<section id="team">
-  <div class="section-inner">
-    <h2>Our Team</h2>
+  </article>
 
-    <div class="team">
 
-      <div class="photo-placeholder">
-        Photo of Tait A. Danielson
-      </div>
+  <article class="feature-card">
 
-      <div>
-        <h3>Tait A. Danielson</h3>
+    <div class="city-art"></div>
 
-        <p>
-          As the former Executive Director of both a St. Paul District Council
-          and a Minneapolis Neighborhood Council, Tait has spent over 15 years
-          advocating for the interests of residents and business owners.
-        </p>
+    <div class="feature-copy">
 
-        <p>
-          His education and experience are grounded in political lobbying,
-          grant and loan appropriation, city planning, and process negotiation.
-        </p>
-      </div>
+      <h3>CONTACT US</h3>
+
+      <p>
+        Ready to take the next step?
+        Contact us to discuss your project and evaluate your needs.
+      </p>
+
+      <a class="text-link" href="#contact">
+        Connect &nbsp;→
+      </a>
 
     </div>
-  </div>
+
+  </article>
+
 </section>
 
-<section class="alt" id="service-area">
-  <div class="section-inner">
-    <h2>Service Area</h2>
 
-    <p class="lead">
-      We serve the entire seven-county Twin Cities metropolitan area.
-    </p>
+<section class="value" id="services">
+
+  <div class="value-inner">
+
+    <h2>
+      Community Support Is Part of the Development Process
+    </h2>
 
     <p>
-      Community Asset Brokers works with projects throughout Minneapolis,
-      St. Paul, and surrounding communities.
-    </p>
-  </div>
-</section>
-
-<section id="resources" class="resources">
-  <div class="section-inner">
-    <h2>Resources</h2>
-
-    <p class="lead">
-      Applications that commonly require community notification include:
+      Community Asset Brokers helps businesses and developers
+      navigate zoning, permitting, public notification,
+      neighborhood engagement, governmental approvals,
+      and other processes that can determine whether a project moves forward.
     </p>
 
-    <ul>
-      <li>Rezoning</li>
-      <li>Major and Minor Variances</li>
-      <li>Site Plan Review</li>
-      <li>Conditional Use Permits</li>
-      <li>Non-Conforming Use Applications</li>
-      <li>Lot Splits</li>
-      <li>Sign Variances</li>
-      <li>Liquor Licensing</li>
-      <li>Vehicle Repair and Salvage Licensing</li>
-      <li>Sound Level Variances</li>
-      <li>Other municipal permits and licenses</li>
-    </ul>
+    <a class="primary-button" href="#contact">
+      Discuss Your Project
+    </a>
+
   </div>
+
 </section>
 
-<section class="alt contact" id="contact">
-  <div class="section-inner">
-    <h2>Contact Us</h2>
+
+<section class="intro" id="contact">
+
+  <div class="intro-inner">
+
+    <h2>Contact Community Asset Brokers</h2>
 
     <p>
-      Ready to discuss your project? Contact Community Asset Brokers to
-      evaluate your needs and determine the appropriate next steps.
+      Ready to take the next step? We will evaluate your needs
+      and determine the most appropriate strategy for your project.
     </p>
 
-    <a class="button" href="mailto:">Email Us</a>
+    <br>
+
+    <a class="primary-button" href="mailto:">
+      Email Us
+    </a>
+
   </div>
+
 </section>
 
 </main>
 
+
 <footer>
-  <strong>Community Asset Brokers</strong><br>
-  Twin Cities Metropolitan Area
+
+  <div class="footer-inner">
+
+    <div>
+      © 2026 Community Asset Brokers
+    </div>
+
+    <div>
+      Twin Cities Metropolitan Area
+    </div>
+
+    <div>
+      <a href="mailto:">Email</a>
+    </div>
+
+  </div>
+
 </footer>
 
 </body>
