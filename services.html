@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Community Asset Brokers</title>
+
+  <style>
+    :root {
+      --navy: #17324f;
+      --navy-dark: #10273d;
+      --orange: #ff7900;
+      --cream: #f7f5f0;
+      --text: #344050;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--navy);
+      background: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    header {
+      background: var(--navy-dark);
+      padding: 26px 4.5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      color: var(--orange);
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-size: 1rem;
+    }
+
+    nav a.active {
+      color: var(--orange);
+    }
+
+    .contact-button {
+      border: 3px solid var(--white);
+      border-radius: 40px;
+      padding: 20px 32px;
+    }
+
+    .hero {
+      background: #254a6b;
+      color: var(--white);
+      min-height: 465px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 7rem;
+      letter-spacing: 8px;
+    }
+
+    main {
+      max-width: 1540px;
+      margin: 0 auto;
+      padding: 120px 70px;
+    }
+
+    h2 {
+      font-size: 4rem;
+      font-weight: normal;
+      margin: 0 0 55px;
+    }
+
+    h3 {
+      font-size: 2.3rem;
+      font-weight: normal;
+      margin: 0 0 20px;
+    }
+
+    p {
+      font-size: 1.65rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .intro {
+      max-width: 1350px;
+      margin-bottom: 80px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+    }
+
+    .service {
+      background: var(--cream);
+      padding: 48px;
+      border-left: 7px solid var(--orange);
+    }
+
+    .service p {
+      font-size: 1.35rem;
+      margin-bottom: 0;
+    }
+
+    .closing {
+      margin-top: 80px;
+      background: var(--navy);
+      color: var(--white);
+      padding: 55px;
+      text-align: center;
+    }
+
+    .closing h3,
+    .closing p {
+      color: var(--white);
+    }
+
+    .closing a {
+      display: inline-block;
+      margin-top: 15px;
+      background: var(--orange);
+      color: var(--white);
+      text-decoration: none;
+      padding: 20px 38px;
+      border-radius: 40px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 1000px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 22px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 70px 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">COMMUNITY ASSET BROKERS</div>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="services.html" class="active">SERVICES</a>
+    <a href="index.html#resources">RESOURCES</a>
+    <a href="index.html#contact" class="contact-button">CONTACT US</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>SERVICES</h1>
+</section>
+
+<main>
+
+  <h2>Community Development Strategy</h2>
+
+  <div class="intro">
+    <p>
+      Community Asset Brokers helps businesses and developers understand and navigate
+      the community and governmental processes that can influence whether a project
+      advances smoothly, encounters delays, or becomes unnecessarily adversarial.
+    </p>
+
+    <p>
+      Our work is tailored to the needs of each project. We help clients identify
+      potential issues early, understand the people and institutions involved, and
+      develop a practical strategy for moving forward.
+    </p>
+  </div>
+
+  <div class="services">
+
+    <div class="service">
+      <h3>Community Engagement</h3>
+      <p>
+        Identify neighborhood stakeholders, anticipate community concerns, organize
+        outreach, and develop strategies for productive engagement.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Development Process Navigation</h3>
+      <p>
+        Help clients understand the local processes surrounding zoning, permitting,
+        licensing, public notification, hearings, and governmental approvals.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Project Strategy</h3>
+      <p>
+        Evaluate a project's community and governmental environment and develop a
+        practical strategy for timing, outreach, approvals, and risk.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>Public & Stakeholder Communication</h3>
+      <p>
+        Assist with clear communication to residents, neighborhood organizations,
+        public officials, and other stakeholders affected by a proposed project.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="closing">
+    <h3>Every project is different.</h3>
+    <p>
+      Contact Community Asset Brokers to discuss your project and determine where
+      community development support can be most useful.
+    </p>
+    <a href="index.html#contact">DISCUSS YOUR PROJECT</a>
+  </div>
+
+</main>
+
+</body>
+</html>
