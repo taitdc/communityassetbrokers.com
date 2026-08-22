@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Community Asset Brokers</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: #17324f;
+      background: #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    header {
+      background: #10273d;
+      padding: 28px 4%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      color: #ff7900;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 44px;
+      font-family: Arial, sans-serif;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-size: 15px;
+    }
+
+    nav a.active {
+      color: #ff7900;
+    }
+
+    .contact-button {
+      border: 2px solid white;
+      border-radius: 40px;
+      padding: 16px 26px;
+    }
+
+    .page-hero {
+      background: #234766;
+      color: white;
+      text-align: center;
+      padding: 110px 30px;
+    }
+
+    .page-hero h1 {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 72px;
+      letter-spacing: 6px;
+    }
+
+    main {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 80px 5% 100px;
+    }
+
+    h2 {
+      font-size: 54px;
+      font-weight: normal;
+      margin: 0 0 35px;
+    }
+
+    .intro {
+      font-size: 27px;
+      line-height: 1.7;
+      max-width: 1450px;
+      margin-bottom: 70px;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .resource-card {
+      background: #f7f5f0;
+      border-left: 8px solid #ff7900;
+      padding: 45px 55px;
+      min-height: 250px;
+    }
+
+    .resource-card h3 {
+      margin: 0 0 20px;
+      font-size: 36px;
+      font-weight: normal;
+    }
+
+    .resource-card p {
+      margin: 0;
+      font-size: 23px;
+      line-height: 1.6;
+    }
+
+    .closing {
+      margin-top: 70px;
+      background: #193b5d;
+      color: white;
+      text-align: center;
+      padding: 65px 60px;
+    }
+
+    .closing h2 {
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .closing p {
+      font-size: 25px;
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+
+    @media (max-width: 1000px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-hero h1 {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">COMMUNITY ASSET BROKERS</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a class="active" href="resources.html">Resources</a>
+    <a class="contact-button" href="index.html#contact">Contact Us</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <h1>RESOURCES</h1>
+</section>
+
+<main>
+
+  <h2>Understanding the Development Process</h2>
+
+  <div class="intro">
+    <p>
+      Successful development requires more than understanding a site or a business plan.
+      Projects operate within a network of community expectations, governmental processes,
+      public notice requirements, and local decision-making.
+    </p>
+
+    <p>
+      These resources are intended to help developers and businesses better understand
+      the environment in which projects move forward.
+    </p>
+  </div>
+
+  <div class="resource-grid">
+
+    <div class="resource-card">
+      <h3>Community Engagement</h3>
+      <p>
+        Understanding who is affected by a project, how neighborhood organizations operate,
+        and when community engagement should begin.
+      </p>
+    </div>
+
+    <div class="resource-card">
+      <h3>Public Process</h3>
+      <p>
+        Understanding public notification, hearings, governmental review, and the points
+        where community concerns can influence a project's progress.
+      </p>
+    </div>
+
+    <div class="resource-card">
+      <h3>Project Preparation</h3>
+      <p>
+        Identifying potential concerns early and preparing a project for conversations with
+        residents, public officials, neighborhood organizations, and other stakeholders.
+      </p>
+    </div>
+
+    <div class="resource-card">
+      <h3>Local Government</h3>
+      <p>
+        Understanding the roles of city and county departments, elected officials, planning
+        bodies, and other institutions involved in development decisions.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="closing">
+    <h2>Resources will continue to be added.</h2>
+    <p>
+      Community Asset Brokers will use this section to provide practical information about
+      community engagement, local government processes, and development strategy in the
+      Twin Cities Metro.
+    </p>
+  </div>
+
+</main>
+
+</body>
+</html>
